@@ -1,0 +1,221 @@
+-- Gui to Lua
+-- Version: 3.2
+print("Thanks for using DaBaby Gui. LET'S GOOOOOOOOOOOOOOOOOOOOOOOOOO!")
+-- Instances:
+
+local DaBabyGui = Instance.new("ScreenGui")
+local dababystand = Instance.new("Frame")
+local x = Instance.new("TextButton")
+local ImageLabel = Instance.new("ImageLabel")
+local dbgonepo = Instance.new("TextLabel")
+local AOP = Instance.new("TextButton")
+local CAF = Instance.new("TextLabel")
+local Getcrates = Instance.new("TextButton")
+local AOC = Instance.new("TextLabel")
+
+--Properties:
+
+DaBabyGui.Name = "DaBabyGui"
+DaBabyGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+DaBabyGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+dababystand.Name = "dababystand"
+dababystand.Parent = DaBabyGui
+dababystand.BackgroundColor3 = Color3.fromRGB(170, 85, 255)
+dababystand.Position = UDim2.new(0.0943135321, 0, 0.269987434, 0)
+dababystand.Size = UDim2.new(0, 382, 0, 195)
+
+x.Name = "x"
+x.Parent = dababystand
+x.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
+x.Position = UDim2.new(0.942408383, 0, 0, 0)
+x.Size = UDim2.new(0, 22, 0, 18)
+x.Font = Enum.Font.SourceSans
+x.Text = "X"
+x.TextColor3 = Color3.fromRGB(0, 0, 0)
+x.TextSize = 14.000
+
+ImageLabel.Parent = dababystand
+ImageLabel.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+ImageLabel.Position = UDim2.new(0, 0, 0.0923076943, 0)
+ImageLabel.Size = UDim2.new(0, 382, 0, 177)
+ImageLabel.Image = "rbxassetid://7542016565"
+
+dbgonepo.Name = "dbgonepo"
+dbgonepo.Parent = dababystand
+dbgonepo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+dbgonepo.BackgroundTransparency = 1.000
+dbgonepo.Position = UDim2.new(0.0732984319, 0, 0, 0)
+dbgonepo.Size = UDim2.new(0, 332, 0, 18)
+dbgonepo.Font = Enum.Font.Sarpanch
+dbgonepo.Text = "DaBaby Gui 1.0"
+dbgonepo.TextColor3 = Color3.fromRGB(0, 0, 0)
+dbgonepo.TextSize = 26.000
+
+AOP.Name = "AOP"
+AOP.Parent = dababystand
+AOP.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+AOP.Position = UDim2.new(0.0732984394, 0, 0.420512825, 0)
+AOP.Size = UDim2.new(0, 29, 0, 30)
+AOP.Font = Enum.Font.SourceSans
+AOP.Text = ""
+AOP.TextColor3 = Color3.fromRGB(0, 0, 0)
+AOP.TextSize = 14.000
+
+CAF.Name = "CAF"
+CAF.Parent = dababystand
+CAF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CAF.BackgroundTransparency = 1.000
+CAF.Position = UDim2.new(0.0575916171, 0, 0.102564104, 0)
+CAF.Size = UDim2.new(0, 200, 0, 50)
+CAF.Font = Enum.Font.SourceSans
+CAF.Text = "Crates Auto Farm"
+CAF.TextColor3 = Color3.fromRGB(170, 255, 0)
+CAF.TextSize = 14.000
+
+Getcrates.Name = "Getcrates"
+Getcrates.Parent = dababystand
+Getcrates.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Getcrates.Position = UDim2.new(0.0722387433, 0, 0.149365842, 0)
+Getcrates.Size = UDim2.new(0, 29, 0, 30)
+Getcrates.Font = Enum.Font.SourceSans
+Getcrates.Text = ""
+Getcrates.TextColor3 = Color3.fromRGB(0, 0, 0)
+Getcrates.TextSize = 14.000
+
+AOC.Name = "AOC"
+AOC.Parent = dababystand
+AOC.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AOC.BackgroundTransparency = 1.000
+AOC.Position = UDim2.new(0.0575916171, 0, 0.369230777, 0)
+AOC.Size = UDim2.new(0, 200, 0, 50)
+AOC.Font = Enum.Font.SourceSans
+AOC.Text = "Auto Open Crates"
+AOC.TextColor3 = Color3.fromRGB(170, 255, 0)
+AOC.TextSize = 14.000
+
+-- Scripts:
+
+local function LULWGZG_fake_script() -- x.closeScript 
+	local script = Instance.new('LocalScript', x)
+
+	script.Parent.MouseButton1Click:Connect(function(closeIt)
+		
+		script.Parent.Parent.Parent:Destroy()
+		print("DaBaby Gui Closed!")
+	end)
+end
+coroutine.wrap(LULWGZG_fake_script)()
+local function ZBQEE_fake_script() -- AOP.AOPs 
+	local script = Instance.new('LocalScript', AOP)
+
+	local jj = false
+	local kk = false
+	script.Parent.MouseButton1Click:Connect(function()
+		if jj == false then
+			jj = true
+	
+			if kk == false then
+				print("Auto open crates script started :D")
+				script.Parent.BackgroundColor3 = Color3.new(0,0,1)
+				while jj do
+					wait(.2)
+					for i,v in pairs(game.Players.LocalPlayer.Crates:GetChildren()) do
+						if v.Value >= 1 then
+							game:GetService("ReplicatedStorage").MysteryBox:InvokeServer(v.Name)
+							wait()
+						end
+					end
+				end
+			end
+		else
+			print("Auto open crates script stopped D:")
+			script.Parent.BackgroundColor3 = Color3.new(1,0,0)
+			jj = false	
+		end
+	
+		kk = false
+	end)
+	
+end
+coroutine.wrap(ZBQEE_fake_script)()
+local function TROVSK_fake_script() -- dababystand.dragScript 
+	local script = Instance.new('LocalScript', dababystand)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(TROVSK_fake_script)()
+local function KNQZY_fake_script() -- Getcrates.gcS 
+	local script = Instance.new('LocalScript', Getcrates)
+
+	local ff = false
+	local gg = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if ff == false then
+			ff = true
+	
+			if gg == false then
+				print("Crates autofarm script started :D")
+				script.Parent.BackgroundColor3 = Color3.new(0,0,1)
+				local old = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+				while ff do 
+					wait()
+					for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+						if v:FindFirstChild("Open") then
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+							wait(.3)
+	
+						end
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = old
+					end
+				end
+			end
+		else 
+			print("Crates autofarm script stopped D:")
+			script.Parent.BackgroundColor3 = Color3.new(1,0,0)	
+			ff = false	
+	
+		end
+		gg = false
+	end)
+end
+coroutine.wrap(KNQZY_fake_script)()
